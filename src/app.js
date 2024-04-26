@@ -9,6 +9,9 @@ window.onload = function() {
   //write your code here
   console.log("Hello Rigo from the console!");
 };
+
+
+
 const pronoun = 
     ['the',
      'our',
@@ -27,16 +30,14 @@ const noun =
 
 const ext = 
     ['.com', '.gov', '.co.uk', '.org', '.hrg', '.aaa'];
-   
-let sentence =
-pronoun[rand(pronoun.length)] +
-adj[rand(adj.length)] +
-noun[rand(noun.length)] + 
-ext[rand(ext.length)];
-
-console.log(sentence);
-
-function rand(length) {
-    let number = Math.floor(Math.random() * length);
-    return number;
-  };
+    
+for (let x of pronoun) {
+    for (let y of adj) {
+      for (let z of noun) {
+        for (let a of ext) {
+            console.log(pronoun[x] + adj[y] + noun[z] + ext[a]);
+        }
+        
+      }
+    }
+  }
